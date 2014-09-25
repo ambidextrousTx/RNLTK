@@ -9,6 +9,10 @@ class TestBaseUtils(unittest.TestCase):
         segments = BaseUtils.get_words('this is a random sentence')
         self.assertEqual(segments, ['this', 'is', 'a', 'random', 'sentence'])
 
+    def test_word_segmenter_ignores_whitespace(self):
+        segments = BaseUtils.get_words('this   is   a random sentence')
+        self.assertEqual(segments, ['this', 'is', 'a', 'random', 'sentence'])
+
 
 if __name__ == '__main__':
     unittest.main()
