@@ -11,9 +11,8 @@ def get_words(sentence):
     >>> get_words('a, most$ **interesting   piece')
     >>> ['a', 'most', 'interesting', 'piece']
     '''
-    clean_sentence = ''.join([char for char in sentence if ord(char) in
-                             xrange(97, 123) or ord(char) in xrange(75, 91)
-                             or ord(char) == 32])
+    clean_sentence = ''.join([char for char in sentence if char.isalpha()
+                             or char.isspace()])
     segments = clean_sentence.split(' ')
     words = [word for word in segments if not word == '']
     return words
