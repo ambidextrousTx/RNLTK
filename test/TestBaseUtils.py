@@ -32,6 +32,13 @@ class TestBaseUtils(unittest.TestCase):
         segments = BaseUtils.get_words('this   is   $$%%a random --00sentence')
         self.assertEqual(segments, ['this', 'is', 'a', 'random', 'sentence'])
 
+    def test_segmenter_common_delims(self):
+        ''' The sentence segmenter is able to split sentences
+        on ., !, ?, etc. '''
+        segments = BaseUtils.get_sentences('Wow! Did you see this? Amazing.')
+        self.assertEqual(segments, ['Wow', 'Did you see this', 'Amazing'])
+
+
 
 if __name__ == '__main__':
     unittest.main()
