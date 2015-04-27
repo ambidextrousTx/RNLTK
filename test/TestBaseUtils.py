@@ -38,6 +38,11 @@ class TestBaseUtils(unittest.TestCase):
         segments = BaseUtils.get_sentences('Wow! Did you see this? Amazing.')
         self.assertEqual(segments, ['Wow', 'Did you see this', 'Amazing'])
 
+    def test_ignore_whitespace_sent(self):
+        ''' Whitespace in the sentences is also ignored '''
+        segments = BaseUtils.get_sentences('Wow!   Did you see this? Amazing.')
+        self.assertEqual(segments, ['Wow', 'Did you see this', 'Amazing'])
+
 
 
 if __name__ == '__main__':
