@@ -1,0 +1,21 @@
+Major tasks in NLP (features to be added and updated)
+
+Automatic summarization
+Coreference resolution
+Discourse analysis
+Machine translation
+Morphological segmentation
+Named entity recognition
+Natural language generation
+Natural language understanding
+Part of speech tagging
+Parsing
+Question answering
+Relationship extraction
+Sentence boundary disambiguation
+Sentiment analysis
+Topic segmentation
+Word segmentation
+Word sense disambiguation
+Information retrieval
+Information extraction
